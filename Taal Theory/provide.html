@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What We Provide | Taal Theory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgMusic" loop>
+<source src="A Sitar Story - Hanu Dixit.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+<img src="Screenshot 2026-02-24 091856.png">
+<div class="links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="provide.html">What We Provide</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+<div class="toggle-music">
+    
+    <button class="btn" onclick="toggleMusic()">Toggle Music</button>
+</div>
+
+<script>
+    // Check if the audio is already playing
+    window.onload = function() {
+        const audio = document.getElementById('bgMusic');
+        if (localStorage.getItem('musicPlaying') === 'true') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    };
+
+    function toggleMusic() {
+        const audio = document.getElementById('bgMusic');
+        if (audio.paused) {
+            audio.play();
+            localStorage.setItem('musicPlaying', 'true');
+        } else {
+            audio.pause();
+            localStorage.setItem('musicPlaying', 'false');
+        }
+    }
+</script>
+<section>
+<h2>What We Provide</h2>
+<div class="grid">
+<div class="card">Live Band Performance</div>
+<div class="card">Tabla & Percussion Sets</div>
+<div class="card">Stage Coordination</div>
+<div class="card">Custom Event Playlists</div>
+<div class="card">Festival & Cultural Programs</div>
+<div class="card">Flute Performance</div>
+<div class="card">Fusion Songs </div>
+<div class="card">Gen-z Devotional and Enthusiastic Songs</div>
+<div class="card">Bhajans</div>
+</div>
+<div class="card">
+<h3 style="color:#00f5ff;">Performance Setup Requirement</h3>
+<p style="margin-top:15px; line-height:1.7;">
+For delivering the best possible sound quality and live performance experience, we kindly request that the basic sound infrastructure be arranged by the event organizer.
+<br><br>
+This includes:
+<br>• Professional Sound System
+<br>• Quality Microphones
+<br>• Speakers & Monitors
+<br>• Mixer Console
+<br>• Stage Setup & Power Supply
+<br><br>
+Having proper equipment ensures powerful audio clarity, better audience engagement, and a high-energy performance experience.
+</p>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

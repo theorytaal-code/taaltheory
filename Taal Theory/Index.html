@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Taal Theory | Home</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+<source src="A Sitar Story - Hanu Dixit.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+<img src="Screenshot 2026-02-24 091856.png">
+<div class="links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="provide.html">What We Provide</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+    <h1>TAAL THEORY</h1>
+    <p>Live Music Performances For Restaurants, Parties, Festivals & Public Events</p>
+    <button class="btn" onclick="toggleMusic()">Toggle Music</button>
+</div>
+
+<script>
+    // Check if the audio is already playing
+    window.onload = function() {
+        const audio = document.getElementById('bgMusic');
+        if (localStorage.getItem('musicPlaying') === 'true') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    };
+
+    function toggleMusic() {
+        const audio = document.getElementById('bgMusic');
+        if (audio.paused) {
+            audio.play();
+            localStorage.setItem('musicPlaying', 'true');
+        } else {
+            audio.pause();
+            localStorage.setItem('musicPlaying', 'false');
+        }
+    }
+</script>
+
+<section>
+    <h2>Events We Perform At</h2>
+<div class="grid">
+<div class="card">Private Restaurant Shows</div>
+<div class="card">Birthday & Private Parties</div>
+<div class="card">Public Gatherings & Festivals</div>
+<div class="card">College & Youth Events</div>
+</div>
+
+<br> <br> <br> <br>
+
+<div class="offer" style="background-color: #f9f9f9; border: 2px solid #ffcc00; border-radius: 8px; padding: 20px; text-align: center; margin: 20px 0;">
+    <h3 style="color: #ffcc00;">Special Offer!</h3>
+    <p style="font-size: 16px; color: #333;">Our First Program at every place will be free of cost, so that you can experience our performance and decide on future bookings with confidence.</p>
+</div>
+</section>
+
+<a class="whatsapp" target="_blank"
+href="https://wa.me/918983000233?text=Hello%20Taal%20Theory,%20I%20want%20to%20book%20a%20performance!">
+WhatsApp Booking
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Us | Taal Theory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="bgMusic" loop>
+<source src="A Sitar Story - Hanu Dixit.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+<img src="Screenshot 2026-02-24 091856.png">
+<div class="links">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="provide.html">What We Provide</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+<div class="toggle-music">
+    
+    <button class="btn" onclick="toggleMusic()">Toggle Music</button>
+</div>
+
+<script>
+    // Check if the audio is already playing
+    window.onload = function() {
+        const audio = document.getElementById('bgMusic');
+        if (localStorage.getItem('musicPlaying') === 'true') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    };
+
+    function toggleMusic() {
+        const audio = document.getElementById('bgMusic');
+        if (audio.paused) {
+            audio.play();
+            localStorage.setItem('musicPlaying', 'true');
+        } else {
+            audio.pause();
+            localStorage.setItem('musicPlaying', 'false');
+        }
+    }
+</script>
+<section>
+<h2>About Us</h2>
+<div class="card">
+Taal Theory is a dynamic live music group known for energetic performances and engaging stage presence.
+<br><br>
+We perform at restaurants, birthday parties, college events, public gatherings and festivals.
+<br><br>
+Our goal is to create unforgettable musical experiences that connect people through rhythm and melody.
+</div>
+<br> <br> <br>
+<h2>Highlights</h2>
+<div class="card">
+<ul>
+
+ <li>25+ Live Performances</li> <br>
+ <li>5000+ Audience Entertained</li> <br>
+ <li>20+ College Events</li> <br>
+ <li>100% Positive Feedback</li> <br>
+
+</ul>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
